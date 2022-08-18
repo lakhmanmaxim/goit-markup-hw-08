@@ -1,3 +1,17 @@
-.navigation {
+@media screen and (max-width: $mobile) {
+  .navigation {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .navigation {
+    margin-left: 88px;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .navigation {
     margin-left: 93px;
+  }
 }

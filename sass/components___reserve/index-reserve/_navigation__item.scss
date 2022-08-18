@@ -1,0 +1,7 @@
+.navigation__item {
+    position: relative;
+}
+
+.navigation__list .navigation__item + .navigation__item {
+    margin-left: 50px;
+}

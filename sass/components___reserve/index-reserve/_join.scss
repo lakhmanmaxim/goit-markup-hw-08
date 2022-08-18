@@ -1,0 +1,45 @@
+.join {
+    margin-left: 70px;
+
+}
+
+.join__text {
+    font-family: $main-font;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: $third-text-color;
+
+    margin-bottom: 20px;
+}
+
+.join__list {
+    display: flex;
+    width: 206px;
+    justify-content: space-between;
+}
+
+.join__link {
+    display: flex;
+    width: 44px;
+    background-color: $bg-color-footer-social;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    height: 44px;
+
+    transition:
+    background-color 250ms $transition-timing-function;
+
+       
+    &:hover {
+    background-color: $hover-color;
+    }
+
+    &:focus {
+    background-color: $hover-color;
+    }
+}

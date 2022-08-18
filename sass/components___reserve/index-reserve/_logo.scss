@@ -1,0 +1,26 @@
+.logo {
+    font-family: $logo-font;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+    color: $color-logo;
+    text-decoration: none;
+
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+
+.logo__black {
+    color: $main-text-color;
+}
+
+.logo__white {
+    color: $third-text-color;
+}
+
+.logo__footer {
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 0;
+}

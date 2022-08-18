@@ -1,26 +1,47 @@
-.logo {
+@media screen and (min-width: 320px) {
+  .logo {
+    font-size: 24px;
+    line-height: 1.17;
+    display: inline-block;
     font-family: $logo-font;
     font-weight: 700;
-    font-size: 26px;
-    line-height: 1.19;
     letter-spacing: 0.03em;
     color: $color-logo;
     text-decoration: none;
+  }
 
-    padding-top: 24px;
-    padding-bottom: 24px;
-}
-
-.logo__black {
+  .logo__black {
     color: $main-text-color;
-}
+  }
 
-.logo__white {
+  .logo__white {
     color: $third-text-color;
-}
+  }
 
-.logo__footer {
+  .logo__footer {
     display: inline-block;
     margin-bottom: 20px;
     padding: 0;
+  }
+}
+
+@media screen and (max-width: $mobile) {
+  .logo {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .logo {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .logo {
+    font-size: 25px;
+    line-height: 1.19;
+  }
 }
