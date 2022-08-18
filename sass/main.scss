@@ -5,6 +5,7 @@
 @import "./base/body";
 @import "./base/container";
 @import "./base/section";
+
 @import "./components/index/header";
 @import "./components/index/logo";
 @import "./components/index/menu-button";
@@ -18,27 +19,12 @@
 @import "./components/index/modal";
 @import "./components/index/features";
 @import "./components/index/worksheet";
-
-// @import "./components/index/container";
-// @import "./components/index/page-header";
-// @import "./components/index/logo";
-// @import "./components/index/navigation";
-// @import "./components/index/navigation__list";
-// @import "./components/index/navigation__item";
-// @import "./components/index/navigation__link";
-// @import "./components/index/contacts__list";
-// @import "./components/index/hero";
-// @import "./components/index/backdrop";
-// @import "./components/index/modal";
-// @import "./components/index/form";
-// @import "./components/index/features";
-// @import "./components/index/worksheet";
-// @import "./components/index/team";
-// @import "./components/index/socials";
-// @import "./components/index/clients";
-// @import "./components/index/footer";
-// @import "./components/index/join";
-// @import "./components/index/subscribe";
+@import "./components/index/team";
+@import "./components/index/socials";
+@import "./components/index/clients";
+@import "./components/index/footer";
+@import "./components/index/join";
+@import "./components/index/subscribe";
 
 // // Портфолио
 

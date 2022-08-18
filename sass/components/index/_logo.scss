@@ -17,6 +17,13 @@
   .logo__white {
     color: $third-text-color;
   }
+}
+
+@media screen and (max-width: $mobile) {
+  .logo {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
 
   .logo__footer {
     display: inline-block;
@@ -25,17 +32,16 @@
   }
 }
 
-@media screen and (max-width: $mobile) {
-  .logo {
-    padding-top: 16px;
-    padding-bottom: 16px;
-  }
-}
-
 @media screen and (min-width: 768px) {
   .logo {
     padding-top: 25px;
     padding-bottom: 25px;
+  }
+
+  .logo__footer {
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 0;
   }
 }
 

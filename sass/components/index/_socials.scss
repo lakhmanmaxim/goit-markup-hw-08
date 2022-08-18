@@ -1,0 +1,36 @@
+.socials__link {
+  fill: $icon-fill-color;
+  display: flex;
+  height: 44px;
+  width: 44px;
+  background-color: $bg-color-third;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+
+  transition: background-color 250ms $transition-timing-function,
+    fill 250ms $transition-timing-function;
+
+  &:hover,
+  &:focus {
+    background-color: $hover-color;
+    fill: $second-text-color-buttons;
+  }
+}
+
+@media screen and (max-width: 259px) {
+  .socials {
+    gap: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 260px) {
+  .socials {
+    gap: 10px;
+    display: flex;
+    justify-content: center;
+  }
+}
