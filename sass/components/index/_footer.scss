@@ -57,10 +57,10 @@
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: $desktop) {
+@media screen and (min-width: 768px) and (max-width: $tablet) {
   .footer__container {
     min-width: 232px;
-    margin-left: 76px;
+    // margin-left: 76px;
     text-align: center;
     margin-bottom: 60px;
   }
@@ -76,7 +76,7 @@
 
 @media screen and (min-width: $desktop) {
   .footer__container {
-    flex-grow: 1;
+    // flex-grow: 1;
   }
 
   //   .address__list {
