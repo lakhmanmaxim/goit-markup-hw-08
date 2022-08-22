@@ -9,6 +9,9 @@
 @import "./components/index/header";
 @import "./components/index/logo";
 @import "./components/index/menu-button";
+@import "./components/index/mobile-menu";
+@import "./components/index/mobile-menu-contacts";
+@import "./components/index/mobile-menu-socials";
 @import "./components/index/navigation";
 @import "./components/index/navigation__list";
 @import "./components/index/navigation__item";
@@ -17,6 +20,7 @@
 @import "./components/index/hero";
 @import "./components/index/backdrop";
 @import "./components/index/modal";
+@import "./components/index/form";
 @import "./components/index/features";
 @import "./components/index/worksheet";
 @import "./components/index/team";
@@ -27,7 +31,9 @@
 @import "./components/index/subscribe";
 
 // // Портфолио
-
+@import "./components/portfolio/title";
+@import "./components/portfolio/filter";
+@import "./components/portfolio/cards";
 // @import "./components/portfolio/title";
 // @import "./components/portfolio/filter";
 // @import "./components/portfolio/cards";

@@ -1,0 +1,42 @@
+.mobile-menu-contacts {
+  margin-top: 302px;
+}
+
+.mobile-menu-contacts__item + .mobile-menu-contacts__item {
+  margin-top: 32px;
+}
+
+.mobile-menu-contacts__link-phone {
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 1.176;
+  letter-spacing: 0.02em;
+  color: $hero-button-hover-color;
+
+  transition: color 250ms $transition-timing-function,
+    text-shadow 250ms $transition-timing-function;
+
+  &:hover,
+  &:focus {
+    color: $hero-button-hover-color;
+    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
+      0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
+}
+
+.mobile-menu-contacts__link-mail {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.166;
+  letter-spacing: 0.02em;
+  color: $second-text-color;
+
+  transition: color 250ms $transition-timing-function;
+
+  &:hover,
+  &:focus {
+    color: $hero-button-hover-color;
+    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
+      0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
+}

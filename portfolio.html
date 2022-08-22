@@ -23,14 +23,57 @@
     <Header class="header">
         <div class="container container__header">
             <a class="logo" href="./index.html">Web<span class="logo__black">Studio</span></a>
-
-            <!-- Навигация -->
-            <button type="button" class="menu-button">
+            <button type="button" class="menu-button menu-button--open" data-menu-open>
                 <svg width="40" height="40">
                     <use class="" href="./images/icons.svg#menu"></use>
-                    <use class="" href="./images/icons.svg#menu-close"></use>
                 </svg>
             </button>
+            <!-- Навигация -->
+
+            <div class="mobile-menu" data-menu>
+                <div class="container container__mobile-menu">
+                    <nav class="mobile-menu-navigation">
+                        <ul class="mobile-menu-navigation__list">
+                            <li class="mobile-menu-navigation__item">
+                                <a class="mobile-menu-navigation__link mobile-menu-navigation__link"
+                                    href="./index.html">Студия</a>
+                            </li>
+                            <li class="mobile-menu-navigation__item">
+                                <a class="mobile-menu-navigation__link--current-portfolio"
+                                    href="./portfolio.html">Портфолио</a>
+                            </li>
+                            <li class="mobile-menu-navigation__item">
+                                <a class="mobile-menu-navigation__link" href="#contacts">Контакты</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <ul class="mobile-menu-contacts">
+                        <li class="mobile-menu-contacts__item">
+                            <a class="mobile-menu-contacts__link-phone" href="tel:+380961111111">+38 096 111 11 11</a>
+                        </li>
+                        <li class="mobile-menu-contacts__item">
+                            <a class="mobile-menu-contacts__link-mail"
+                                href="mailto:info@devstudio.com">info@devstudio.com</a>
+                        </li>
+                    </ul>
+                    <ul class="mobile-menu-socials">
+                        <li class="mobile-menu-socials__item"><a class="mobile-menu-socials__link" href="">Instagram</a>
+                        </li>
+                        <li class="mobile-menu-socials__item"><a class="mobile-menu-socials__link" href="">Twitter</a>
+                        </li>
+                        <li class="mobile-menu-socials__item"><a class="mobile-menu-socials__link" href="">Facebook</a>
+                        </li>
+                        <li class="mobile-menu-socials__item"><a class="mobile-menu-socials__link" href="">LinkedIn</a>
+                        </li>
+                    </ul>
+                    <button type="button" class="menu-button menu-button--close" data-menu-close>
+                        <svg width="40" height="40">
+                            <use class="" href="./images/icons.svg#menu-close"></use>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
             <nav class="navigation">
                 <ul class="navigation__list">
                     <li class="navigation__item"><a class="navigation__link" href="./index.html">Студия</a></li>
@@ -71,13 +114,13 @@
                 <h1 class="title">Портфолио наших работ</h1>
 
                 <ul class="filter">
-                    <li class="portfolio-filter-item"><button class="filter__button" type="button">Все</button></li>
-                    <li class="portfolio-filter-item"><button class="filter__button" type="button">Веб-сайты</button>
+                    <li class="filter__item"><button class="filter__button" type="button">Все</button></li>
+                    <li class="filter__item"><button class="filter__button" type="button">Веб-сайты</button>
                     </li>
-                    <li class="portfolio-filter-item"><button class="filter__button" type="button">Приложения</button>
+                    <li class="filter__item"><button class="filter__button" type="button">Приложения</button>
                     </li>
-                    <li class="portfolio-filter-item"><button class="filter__button" type="button">Дизайн</button></li>
-                    <li class="portfolio-filter-item"><button class="filter__button" type="button">Маркетинг</button>
+                    <li class="filter__item"><button class="filter__button" type="button">Дизайн</button></li>
+                    <li class="filter__item"><button class="filter__button" type="button">Маркетинг</button>
                     </li>
                 </ul>
 
@@ -87,8 +130,23 @@
                     <li class="cards__item">
                         <a class="cards__link" href="">
                             <div class="overlay">
-                                <img src="./images/portfolio/technokryak.jpg" alt="Ноутбук с примером сайта" width="370"
-                                    height="294">
+                                <picture>
+
+                                    <source
+                                        srcset="./images/portfolio/mobile/technokryak-mobile.jpg 1x, ./images/portfolio/mobile/technokryak-mobile@2x.jpg 2x"
+                                        media="(max-width: 767px)" />
+
+                                    <source
+                                        srcset="./images/portfolio/tablet/technokryak-tablet.jpg 1x, ./images/portfolio/tablet/technokryak-tablet@2x.jpg 2x"
+                                        media="(max-width: 1199px)" />
+
+                                    <source
+                                        srcset="./images/portfolio/desktop/technokryak-desktop.jpg 1x, ./images/portfolio/desktop/technokryak-desktop@2x.jpg 2x"
+                                        media="(min-width: 1200px)" />
+
+                                    <img class="overlay__img" src="./images/portfolio/desktop/technokryak-desktop.jpg"
+                                        alt="Ноутбук с примером сайта">
+                                </picture>
                                 <div class="overlay__container">
                                     <p class="overlay__text">Ресурс предлагает комплексные предложения с разным
                                         уровнем функционала и сервисов.
@@ -108,8 +166,24 @@
                     <li class="cards__item">
                         <a class="cards__link" href="">
                             <div class="overlay">
-                                <img src="./images/portfolio/basketballists.jpg"
-                                    alt="Баскетболисты в прыжке. Идёт борьба за мяч" width="370" height="294">
+                                <picture>
+
+                                    <source
+                                        srcset="./images/portfolio/mobile/basketballists-mobile.jpg 1x, ./images/portfolio/mobile/basketballists-mobile@2x.jpg 2x"
+                                        media="(max-width: 767px)" />
+
+                                    <source
+                                        srcset="./images/portfolio/tablet/basketballists-tablet.jpg 1x, ./images/portfolio/tablet/basketballists-tablet@2x.jpg 2x"
+                                        media="(max-width: 1199px)" />
+
+                                    <source
+                                        srcset="./images/portfolio/desktop/basketballists-desktop.jpg 1x, ./images/portfolio/desktop/basketballists-desktop@2x.jpg 2x"
+                                        media="(min-width: 1200px)" />
+
+                                    <img src="./images/portfolio/desktop/basketballists-desktop.jpg"
+                                        alt="Баскетболисты в прыжке. Идёт борьба за мяч">
+                                </picture>
+
                                 <div class="overlay__container">
                                     <p class="overlay__text">Ресурс предлагает комплексные предложения с разным
                                         уровнем функционала и сервисов.
@@ -129,8 +203,25 @@
                     <li class="cards__item">
                         <a class="cards__link" href="">
                             <div class="overlay">
-                                <img src="./images/portfolio/seafood.jpg"
-                                    alt="Крупная рыба и название ресторана &#34;Seafood&#34;" width="370" height="294">
+
+                                <picture>
+
+                                    <source
+                                        srcset="./images/portfolio/mobile/seafood-mobile.jpg 1x, ./images/portfolio/mobile/seafood-mobile@2x.jpg 2x"
+                                        media="(max-width: 767px)" />
+
+                                    <source
+                                        srcset="./images/portfolio/tablet/seafood-tablet.jpg 1x, ./images/portfolio/tablet/seafood-tablet@2x.jpg 2x"
+                                        media="(max-width: 1199px)" />
+
+                                    <source
+                                        srcset="./images/portfolio/desktop/seafood-desktop.jpg 1x, ./images/portfolio/desktop/seafood-desktop@2x.jpg 2x"
+                                        media="(min-width: 1200px)" />
+
+                                    <img src="./images/portfolio/desktop/seafood-desktop.jpg"
+                                        alt="Крупная рыба и название ресторана &#34;Seafood&#34;">
+                                </picture>
+
                                 <div class="overlay__container">
                                     <p class="overlay__text">Ресурс предлагает комплексные предложения с разным
                                         уровнем функционала и сервисов.
@@ -150,7 +241,22 @@
                     <li class="cards__item">
                         <a class="cards__link" href="">
                             <div class="overlay">
-                                <img src="./images/portfolio/headphones.jpg" alt="Наушники" width="370" height="294">
+                                <picture>
+
+                                    <source
+                                        srcset="./images/portfolio/mobile/headphones-mobile.jpg 1x, ./images/portfolio/mobile/headphones-mobile@2x.jpg 2x"
+                                        media="(max-width: 767px)" />
+
+                                    <source
+                                        srcset="./images/portfolio/tablet/headphones-tablet.jpg 1x, ./images/portfolio/tablet/headphones-tablet@2x.jpg 2x"
+                                        media="(max-width: 1199px)" />
+
+                                    <source
+                                        srcset="./images/portfolio/desktop/headphones-desktop.jpg 1x, ./images/portfolio/desktop/headphones-desktop@2x.jpg 2x"
+                                        media="(min-width: 1200px)" />
+
+                                    <img src="./images/portfolio/desktop/headphones-desktop.jpg" alt="Наушники">
+                                </picture>
                                 <div class="overlay__container">
                                     <p class="overlay__text">Ресурс предлагает комплексные предложения с разным
                                         уровнем функционала и сервисов.
@@ -170,8 +276,24 @@
                     <li class="cards__item">
                         <a class="cards__link" href="">
                             <div class="overlay">
-                                <img src="./images/portfolio/boxes.jpg" alt="Две картонные коробки - белая и коричневая"
-                                    width="370" height="294">
+                                <picture>
+
+                                    <source
+                                        srcset="./images/portfolio/mobile/boxes-mobile.jpg 1x, ./images/portfolio/mobile/boxes-mobile@2x.jpg 2x"
+                                        media="(max-width: 767px)" />
+
+                                    <source
+                                        srcset="./images/portfolio/tablet/boxes-tablet.jpg 1x, ./images/portfolio/tablet/boxes-tablet@2x.jpg 2x"
+                                        media="(max-width: 1199px)" />
+
+                                    <source
+                                        srcset="./images/portfolio/desktop/boxes-desktop.jpg 1x, ./images/portfolio/desktop/boxes-desktop@2x.jpg 2x"
+                                        media="(min-width: 1200px)" />
+
+                                    <img src="./images/portfolio/desktop/boxes-desktop.jpg"
+                                        alt="Две картонные коробки - белая и коричневая">
+                                </picture>
+
                                 <div class="overlay__container">
                                     <p class="overlay__text">Ресурс предлагает комплексные предложения с разным
                                         уровнем функционала и сервисов.
@@ -191,8 +313,24 @@
                     <li class="cards__item">
                         <a class="cards__link" href="">
                             <div class="overlay">
-                                <img src="./images/portfolio/monitor.jpg" alt="Компьютерный монитор с примером сайта"
-                                    width="370" height="294">
+                                <picture>
+
+                                    <source
+                                        srcset="./images/portfolio/mobile/monitor-mobile.jpg 1x, ./images/portfolio/mobile/monitor-mobile@2x.jpg 2x"
+                                        media="(max-width: 767px)" />
+
+                                    <source
+                                        srcset="./images/portfolio/tablet/monitor-tablet.jpg 1x, ./images/portfolio/tablet/monitor-tablet@2x.jpg 2x"
+                                        media="(max-width: 1199px)" />
+
+                                    <source
+                                        srcset="./images/portfolio/desktop/monitor-desktop.jpg 1x, ./images/portfolio/desktop/monitor-desktop@2x.jpg 2x"
+                                        media="(min-width: 1200px)" />
+
+                                    <img src="./images/portfolio/desktop/monitor-desktop.jpg"
+                                        alt="Компьютерный монитор с примером сайта">
+                                </picture>
+
                                 <div class="overlay__container">
                                     <p class="overlay__text">Ресурс предлагает комплексные предложения с разным
                                         уровнем функционала и сервисов.
@@ -212,8 +350,24 @@
                     <li class="cards__item">
                         <a class="cards__link" href="">
                             <div class="overlay">
-                                <img src="./images/portfolio/book.jpg" alt="Открытая книга с картинками и текстом"
-                                    width="370" height="294">
+                                <picture>
+
+                                    <source
+                                        srcset="./images/portfolio/mobile/book-mobile.jpg 1x, ./images/portfolio/mobile/book-mobile@2x.jpg 2x"
+                                        media="(max-width: 767px)" />
+
+                                    <source
+                                        srcset="./images/portfolio/tablet/book-tablet.jpg 1x, ./images/portfolio/tablet/book-tablet@2x.jpg 2x"
+                                        media="(max-width: 1199px)" />
+
+                                    <source
+                                        srcset="./images/portfolio/desktop/book-desktop.jpg 1x, ./images/portfolio/desktop/book-desktop@2x.jpg 2x"
+                                        media="(min-width: 1200px)" />
+
+                                    <img src="./images/portfolio/desktop/book-desktop.jpg"
+                                        alt="Открытая книга с картинками и текстом">
+                                </picture>
+
                                 <div class="overlay__container">
                                     <p class="overlay__text">Ресурс предлагает комплексные предложения с разным
                                         уровнем функционала и сервисов.
@@ -233,8 +387,24 @@
                     <li class="cards__item">
                         <a class="cards__link" href="">
                             <div class="overlay">
-                                <img src="./images/portfolio/label.jpg" alt="Бирка с названием бренда &#34;LAB&#34;"
-                                    width="370" height="294">
+                                <picture>
+
+                                    <source
+                                        srcset="./images/portfolio/mobile/label-mobile.jpg 1x, ./images/portfolio/mobile/label-mobile@2x.jpg 2x"
+                                        media="(max-width: 767px)" />
+
+                                    <source
+                                        srcset="./images/portfolio/tablet/label-tablet.jpg 1x, ./images/portfolio/tablet/label-tablet@2x.jpg 2x"
+                                        media="(max-width: 1199px)" />
+
+                                    <source
+                                        srcset="./images/portfolio/desktop/label-desktop.jpg 1x, ./images/portfolio/desktop/label-desktop@2x.jpg 2x"
+                                        media="(min-width: 1200px)" />
+
+                                    <img src="./images/portfolio/desktop/label-desktop.jpg"
+                                        alt="Бирка с названием бренда &#34;LAB&#34;">
+                                </picture>
+
                                 <div class="overlay__container">
                                     <p class="overlay__text">Ресурс предлагает комплексные предложения с разным
                                         уровнем функционала и сервисов.
@@ -254,8 +424,24 @@
                     <li class="cards__item">
                         <a class="cards__link" href="">
                             <div class="overlay">
-                                <img src="./images/portfolio/notebookwithapp.jpg"
-                                    alt="Ноутбук. На экране пример приложения" width="370" height="294">
+                                <picture>
+
+                                    <source
+                                        srcset="./images/portfolio/mobile/notebookwithapp-mobile.jpg 1x, ./images/portfolio/mobile/notebookwithapp-mobile@2x.jpg 2x"
+                                        media="(max-width: 767px)" />
+
+                                    <source
+                                        srcset="./images/portfolio/tablet/notebookwithapp-tablet.jpg 1x, ./images/portfolio/tablet/notebookwithapp-tablet@2x.jpg 2x"
+                                        media="(max-width: 1199px)" />
+
+                                    <source
+                                        srcset="./images/portfolio/desktop/notebookwithapp-desktop.jpg 1x, ./images/portfolio/desktop/notebookwithapp-desktop@2x.jpg 2x"
+                                        media="(min-width: 1200px)" />
+
+                                    <img src="./images/portfolio/desktop/notebookwithapp-desktop.jpg"
+                                        alt="Ноутбук. На экране пример приложения">
+                                </picture>
+
                                 <div class="overlay__container">
                                     <p class="overlay__text">Ресурс предлагает комплексные предложения с разным
                                         уровнем функционала и сервисов.
@@ -359,6 +545,9 @@
         </div>
 
     </footer>
+
+    <script src="./js/mobile-menu.js"></script>
+
 </body>
 
 </html>
