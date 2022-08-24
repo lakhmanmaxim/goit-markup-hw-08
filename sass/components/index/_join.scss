@@ -13,8 +13,8 @@
 
 .join__list {
   display: flex;
-  width: 206px;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 10px;
 }
 
 .join__link {
@@ -38,22 +38,19 @@
 }
 
 @media screen and (max-width: $mobile) {
-  .join__list {
-    margin-left: auto;
-    margin-right: auto;
+  .join {
     margin-bottom: 60px;
   }
 }
 
 @media screen and (min-width: 768px) and (max-width: $tablet) {
   .join {
-    margin-left: 165px;
     text-align: center;
   }
 }
 
 @media screen and (min-width: $desktop) {
   .join {
-    // margin-left: 70px;
+    margin-right: 93px;
   }
 }

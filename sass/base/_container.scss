@@ -27,7 +27,7 @@
   .container__footer--flex {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
   }
 }
 
@@ -39,6 +39,5 @@
   .container__footer--flex {
     display: flex;
     align-items: baseline;
-    justify-content: space-between;
   }
 }

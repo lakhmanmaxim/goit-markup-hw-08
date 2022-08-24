@@ -93,6 +93,15 @@
       margin-right: 0;
     }
   }
+  .cards__link {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .cards__container {
+    flex-grow: 1;
+  }
 }
 
 @media screen and (min-width: $desktop) {

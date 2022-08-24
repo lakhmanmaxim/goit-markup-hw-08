@@ -21,6 +21,10 @@
   }
 }
 
+.navigation__link--current {
+  color: $hover-color;
+}
+
 .navigation__link--current::after {
   content: "";
 

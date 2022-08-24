@@ -314,7 +314,7 @@ body {
   .container__footer--flex {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -324,7 +324,6 @@ body {
   .container__footer--flex {
     display: flex;
     align-items: baseline;
-    justify-content: space-between;
   }
 }
 .section {
@@ -394,24 +393,25 @@ body {
   /* opacity: 0.5; */
 }
 
-@media screen and (min-width: 320px) {
-  .logo {
-    font-size: 24px;
-    line-height: 1.17;
-    display: inline-block;
-    font-family: "Raleway";
-    font-weight: 700;
-    letter-spacing: 0.03em;
-    color: #2196F3;
-    text-decoration: none;
-  }
-  .logo__black {
-    color: #212121;
-  }
-  .logo__white {
-    color: #ffffff;
-  }
+.logo {
+  font-size: 24px;
+  line-height: 1.17;
+  display: inline-block;
+  font-family: "Raleway";
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  color: #2196F3;
+  text-decoration: none;
 }
+
+.logo__black {
+  color: #212121;
+}
+
+.logo__white {
+  color: #ffffff;
+}
+
 @media screen and (max-width: 767px) {
   .logo {
     padding-top: 16px;
@@ -476,6 +476,10 @@ body {
     margin: 0 auto;
     padding-top: 48px;
     padding-left: 40px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
   .mobile-menu {
     position: fixed;
@@ -569,10 +573,6 @@ body {
     border-radius: 2px;
   }
 }
-.mobile-menu-contacts {
-  margin-top: 302px;
-}
-
 .mobile-menu-contacts__item + .mobile-menu-contacts__item {
   margin-top: 32px;
 }
@@ -683,6 +683,10 @@ body {
   color: #2196F3;
 }
 
+.navigation__link--current {
+  color: #2196F3;
+}
+
 .navigation__link--current::after {
   content: "";
   position: absolute;
@@ -762,6 +766,8 @@ body {
   .hero {
     background-color: #c4c4c4;
     text-align: center;
+    max-width: 1600px;
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/hero-desktop.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -804,18 +810,10 @@ body {
   .hero {
     padding-top: 118px;
     padding-bottom: 118px;
-    max-width: 768px;
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/hero-tablet.jpg);
   }
   .hero__title {
     font-size: 26px;
     line-height: 1.61;
-  }
-}
-@media screen and (max-width: 767px) {
-  .hero {
-    max-width: 480px;
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/hero-mobile.jpg);
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1152,6 +1150,9 @@ body {
     margin-left: auto;
     margin-right: auto;
   }
+  .features__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
   .features__title {
     text-align: center;
   }
@@ -1430,9 +1431,7 @@ body {
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .footer__container {
-    min-width: 232px;
     text-align: center;
-    margin-bottom: 60px;
   }
   .logo {
     margin-left: 0px;
@@ -1442,6 +1441,10 @@ body {
   }
 }
 @media screen and (min-width: 1200px) {
+  .footer__container {
+    margin-right: 70px;
+    flex-grow: 1;
+  }
   .address__item:not(:last-child) {
     margin-bottom: 9px;
   }
@@ -1460,8 +1463,8 @@ body {
 
 .join__list {
   display: flex;
-  width: 206px;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 10px;
 }
 
 .join__link {
@@ -1482,16 +1485,18 @@ body {
 }
 
 @media screen and (max-width: 767px) {
-  .join__list {
-    margin-left: auto;
-    margin-right: auto;
+  .join {
     margin-bottom: 60px;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .join {
-    margin-left: 165px;
     text-align: center;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .join {
+    margin-right: 93px;
   }
 }
 .subscribe__label {
@@ -1561,6 +1566,7 @@ body {
 @media screen and (min-width: 480px) and (max-width: 1199px) {
   .subscribe {
     width: 450px;
+    margin-top: 60px;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
@@ -1730,6 +1736,14 @@ body {
   .cards__item:nth-last-child(-n+1) {
     margin-bottom: 0;
     margin-right: 0;
+  }
+  .cards__link {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  .cards__container {
+    flex-grow: 1;
   }
 }
 @media screen and (min-width: 1200px) {
